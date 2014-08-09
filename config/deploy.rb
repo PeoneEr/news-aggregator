@@ -1,10 +1,10 @@
 # config valid only for Capistrano 3.1
 lock '3.2.1'
 
-set :application, 'bookmarks'
-set :repo_url, 'git@github.com:PeoneEr/bookmarks.git'
+set :application, 'news-aggregator'
+set :repo_url, 'git@github.com:PeoneEr/news-aggregator.git'
 
-set :deploy_to, '/home/deploy/bookmarks'
+set :deploy_to, '/home/deploy/news-aggregator'
 
 set :user, 'deploy'
 #set :domain,

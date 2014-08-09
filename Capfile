@@ -9,6 +9,6 @@ require "whenever/capistrano"
 
 set :rvm_type, :user
 set :rvm_ruby_version, '2.0.0-p481'
-set :sidekiq_config, "#{current_path}/config/sidekiq.yml"
+#set :sidekiq_config, "#{current_path}/config/sidekiq.yml"
 
 Dir.glob('lib/capistrano/tasks/*.cap').each { |r| import r }
