@@ -3,6 +3,7 @@ namespace :update do
   desc 'Update rss'
   task :rss => :environment do
     Source.all.map { |c| c.delay.fetch_entries }
+    MyMailer.updating_entries(Entry.order('created_at desc').limit(10)).deliver
   end
 
   desc 'Update newest entries statistics'
