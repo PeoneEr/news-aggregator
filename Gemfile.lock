@@ -1,19 +1,35 @@
 GIT
-  remote: git://github.com/sgruhier/capistrano-db-tasks
-  revision: 396cbbfe0aa4bfe48c8edf2718f2af6163af42bf
-  ref: 396cbbf
+  remote: git://github.com/capistrano/rvm.git
+  revision: dc35ec5e7a74a422250bd6ff5e8885c8b742d0e5
   specs:
-    capistrano-db-tasks (0.2)
+    capistrano-rvm (0.1.1)
+      capistrano (~> 3.0)
+      sshkit (~> 1.2)
+
+GIT
+  remote: git://github.com/mydrive/capistrano-deploytags.git
+  revision: 4fa2026b00a9c4e4f5eaa9fd7a7018e820497314
+  specs:
+    capistrano-deploytags (1.0.0)
+      capistrano (>= 3.2.0)
+
+GIT
+  remote: git://github.com/seuros/capistrano-sidekiq.git
+  revision: 73477132fe05f62916f3ca432281202ddabd50f9
+  specs:
+    capistrano-sidekiq (0.3.6)
+      capistrano
+      sidekiq
 
 GEM
   remote: https://rubygems.org/
   specs:
-    actionmailer (3.2.18)
-      actionpack (= 3.2.18)
+    actionmailer (3.2.19)
+      actionpack (= 3.2.19)
       mail (~> 2.5.4)
-    actionpack (3.2.18)
-      activemodel (= 3.2.18)
-      activesupport (= 3.2.18)
+    actionpack (3.2.19)
+      activemodel (= 3.2.19)
+      activesupport (= 3.2.19)
       builder (~> 3.0.0)
       erubis (~> 2.7.0)
       journey (~> 1.0.4)
@@ -21,75 +37,76 @@ GEM
       rack-cache (~> 1.2)
       rack-test (~> 0.6.1)
       sprockets (~> 2.2.1)
-    activemodel (3.2.18)
-      activesupport (= 3.2.18)
+    activemodel (3.2.19)
+      activesupport (= 3.2.19)
       builder (~> 3.0.0)
-    activerecord (3.2.18)
-      activemodel (= 3.2.18)
-      activesupport (= 3.2.18)
+    activerecord (3.2.19)
+      activemodel (= 3.2.19)
+      activesupport (= 3.2.19)
       arel (~> 3.0.2)
       tzinfo (~> 0.3.29)
-    activeresource (3.2.18)
-      activemodel (= 3.2.18)
-      activesupport (= 3.2.18)
-    activesupport (3.2.18)
+    activeresource (3.2.19)
+      activemodel (= 3.2.19)
+      activesupport (= 3.2.19)
+    activesupport (3.2.19)
       i18n (~> 0.6, >= 0.6.4)
       multi_json (~> 1.0)
     addressable (2.3.6)
-    airbrake (3.1.8)
-      activesupport
-      builder
-      json
-    annotate (2.6.3)
+    annotate (2.6.5)
       activerecord (>= 2.3.0)
       rake (>= 0.8.7)
     arel (3.0.3)
-    brakeman (2.4.3)
+    brakeman (2.6.1)
       erubis (~> 2.6)
       fastercsv (~> 1.5)
       haml (>= 3.0, < 5.0)
       highline (~> 1.6.20)
       multi_json (~> 1.2)
       ruby2ruby (~> 2.0.5)
-      ruby_parser (~> 3.4.0)
+      ruby_parser (~> 3.5.0)
       sass (~> 3.0)
       slim (>= 1.3.6, < 3.0)
       terminal-table (~> 1.4)
     buftok (0.2.0)
     builder (3.0.4)
-    capistrano (2.15.5)
-      highline
-      net-scp (>= 1.0.0)
-      net-sftp (>= 2.0.0)
-      net-ssh (>= 2.0.14)
-      net-ssh-gateway (>= 1.1.0)
-    capistrano-ext (1.2.1)
-      capistrano (>= 1.0.0)
+    capistrano (3.2.1)
+      i18n
+      rake (>= 10.0.0)
+      sshkit (~> 1.3)
+    capistrano-bundler (1.1.3)
+      capistrano (~> 3.1)
+      sshkit (~> 1.2)
+    capistrano-db-tasks (0.3)
+      capistrano (>= 3.0.0)
+    capistrano-rails (1.1.1)
+      capistrano (~> 3.1)
+      capistrano-bundler (~> 1.1)
     capistrano-unicorn (0.1.10)
       capistrano
     celluloid (0.15.2)
       timers (~> 1.1.0)
     chronic (0.10.2)
-    chunky_png (1.3.0)
+    chunky_png (1.3.1)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
       railties (~> 3.2.0)
-    coffee-script (2.2.0)
+    coffee-script (2.3.0)
       coffee-script-source
       execjs
-    coffee-script-source (1.7.0)
-    compass (0.12.6)
+    coffee-script-source (1.7.1)
+    colorize (0.7.3)
+    compass (0.12.7)
       chunky_png (~> 1.2)
       fssm (>= 0.2.7)
       sass (~> 3.2.19)
-    compass-rails (1.1.7)
+    compass-rails (2.0.0)
       compass (>= 0.12.2)
-      sprockets (<= 2.11.0)
     configliere (0.4.18)
       highline (>= 1.5.2)
       multi_json (>= 1.1)
     connection_pool (2.0.0)
-    curb (0.8.5)
+    crass (0.2.1)
+    curb (0.8.6)
     daemons (1.1.9)
     descendants_tracker (0.0.4)
       thread_safe (~> 0.3, >= 0.3.1)
@@ -97,7 +114,7 @@ GEM
       activesupport (>= 3.2)
     equalizer (0.0.9)
     erubis (2.7.0)
-    execjs (2.0.2)
+    execjs (2.2.1)
     faraday (0.8.9)
       multipart-post (~> 1.2.0)
     faraday_middleware (0.9.0)
@@ -106,11 +123,11 @@ GEM
       faraday_middleware (~> 0.8)
       oj (~> 2.0)
     fastercsv (1.5.5)
-    feedjira (1.2.0)
+    feedjira (1.3.1)
       curb (~> 0.8.1)
-      loofah (~> 1.2.1)
+      loofah (~> 2.0.0)
       sax-machine (~> 0.2.1)
-    foundation-rails (5.2.2.0)
+    foundation-rails (5.3.3.0)
       railties (>= 3.1.0)
       sass (>= 3.2.0)
     fssm (0.2.10)
@@ -119,16 +136,16 @@ GEM
       tilt
     has_searcher (0.0.97)
       rails (~> 3.2.3)
-    hashie (2.1.1)
+    hashie (2.1.2)
     highline (1.6.21)
     hike (1.2.3)
-    hirb (0.7.1)
-    http (0.5.0)
+    hirb (0.7.2)
+    http (0.5.1)
       http_parser.rb
     http_parser.rb (0.6.0)
-    i18n (0.6.9)
+    i18n (0.6.11)
     journey (1.0.4)
-    jquery-rails (3.1.0)
+    jquery-rails (3.1.1)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
     jquery-ui-rails (4.0.3)
@@ -139,56 +156,41 @@ GEM
       jquery-ui-rails (= 4.0.3)
       railties (>= 3.1.0)
     json (1.8.1)
-    jwt (0.1.11)
-      multi_json (>= 1.5)
-    kaminari (0.15.1)
+    jwt (1.0.0)
+    kaminari (0.16.1)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
-    kgio (2.9.2)
-    loofah (1.2.1)
-      nokogiri (>= 1.4.4)
+    loofah (2.0.0)
+      nokogiri (>= 1.5.9)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     memoizable (0.4.2)
       thread_safe (~> 0.3, >= 0.3.1)
     mime-types (1.25.1)
-    mini_portile (0.5.3)
+    mini_portile (0.6.0)
     multi_json (1.10.1)
     multi_xml (0.5.5)
     multipart-post (1.2.0)
-    net-scp (1.2.0)
+    net-scp (1.2.1)
       net-ssh (>= 2.6.5)
-    net-sftp (2.1.2)
-      net-ssh (>= 2.6.5)
-    net-ssh (2.8.0)
-    net-ssh-gateway (1.2.0)
-      net-ssh (>= 2.6.5)
-    nokogiri (1.6.1)
-      mini_portile (~> 0.5.0)
-    oauth2 (0.9.3)
+    net-ssh (2.9.1)
+    nokogiri (1.6.3.1)
+      mini_portile (= 0.6.0)
+    nokogumbo (1.1.9)
+      nokogiri
+    oauth2 (0.9.4)
       faraday (>= 0.8, < 0.10)
-      jwt (~> 0.1.8)
+      jwt (~> 1.0)
       multi_json (~> 1.3)
       multi_xml (~> 0.5)
       rack (~> 1.2)
-    oj (2.8.1)
-    openteam-capistrano (0.0.14)
-      capistrano-db-tasks
-      capistrano-ext
-      capistrano-unicorn
-      rvm-capistrano
-    openteam-commons (0.2.3)
-      airbrake
-      configliere
-      rails
-      unicorn
-      whenever
+    oj (2.10.0)
     options (2.3.2)
     pg (0.17.1)
-    polyglot (0.3.4)
+    polyglot (0.3.5)
     pr_geohash (1.0.0)
-    progress_bar (1.0.0)
+    progress_bar (1.0.3)
       highline (~> 1.6.1)
       options (~> 2.3.0)
     rack (1.4.5)
@@ -200,41 +202,40 @@ GEM
       rack
     rack-test (0.6.2)
       rack (>= 1.0)
-    rails (3.2.18)
-      actionmailer (= 3.2.18)
-      actionpack (= 3.2.18)
-      activerecord (= 3.2.18)
-      activeresource (= 3.2.18)
-      activesupport (= 3.2.18)
+    rails (3.2.19)
+      actionmailer (= 3.2.19)
+      actionpack (= 3.2.19)
+      activerecord (= 3.2.19)
+      activeresource (= 3.2.19)
+      activesupport (= 3.2.19)
       bundler (~> 1.0)
-      railties (= 3.2.18)
-    railties (3.2.18)
-      actionpack (= 3.2.18)
-      activesupport (= 3.2.18)
+      railties (= 3.2.19)
+    railties (3.2.19)
+      actionpack (= 3.2.19)
+      activesupport (= 3.2.19)
       rack-ssl (~> 1.3.2)
       rake (>= 0.8.7)
       rdoc (~> 3.4)
       thor (>= 0.14.6, < 2.0)
-    raindrops (0.13.0)
     rake (10.3.2)
     rdoc (3.12.2)
       json (~> 1.4)
-    redis (3.0.7)
-    redis-namespace (1.4.1)
-      redis (~> 3.0.4)
+    redis (3.1.0)
+    redis-namespace (1.5.1)
+      redis (~> 3.0, >= 3.0.4)
     rsolr (1.0.10)
       builder (>= 2.1.2)
     ruby2ruby (2.0.8)
       ruby_parser (~> 3.1)
       sexp_processor (~> 4.0)
-    ruby_parser (3.4.1)
+    ruby_parser (3.5.0)
       sexp_processor (~> 4.1)
     russian (0.6.0)
       i18n (>= 0.5.0)
-    rvm-capistrano (1.5.1)
-      capistrano (~> 2.15.4)
-    sanitize (2.1.0)
+    sanitize (3.0.0)
+      crass (~> 0.2.0)
       nokogiri (>= 1.4.4)
+      nokogumbo (= 1.1.9)
     sass (3.2.19)
     sass-rails (3.2.6)
       railties (~> 3.2.0)
@@ -257,7 +258,7 @@ GEM
       rack (~> 1.4)
       rack-protection (~> 1.4)
       tilt (~> 1.3, >= 1.3.4)
-    slim (2.0.2)
+    slim (2.0.3)
       temple (~> 0.6.6)
       tilt (>= 1.3.3, < 2.1)
     sprockets (2.2.2)
@@ -265,6 +266,10 @@ GEM
       multi_json (~> 1.0)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
+    sshkit (1.5.1)
+      colorize
+      net-scp (>= 1.1.2)
+      net-ssh (>= 2.8.0)
     sunspot (2.0.0)
       pr_geohash (~> 1.0)
       rsolr (~> 1.0.7)
@@ -272,10 +277,10 @@ GEM
       nokogiri
       sunspot (= 2.0.0)
     sunspot_solr (2.0.0)
-    temple (0.6.7)
+    temple (0.6.8)
     terminal-table (1.4.5)
     thor (0.19.1)
-    thread_safe (0.3.3)
+    thread_safe (0.3.4)
     tilt (1.4.1)
     timers (1.1.0)
     treetop (1.4.15)
@@ -292,14 +297,10 @@ GEM
       json (~> 1.8)
       memoizable (~> 0.4.0)
       simple_oauth (~> 0.2.0)
-    tzinfo (0.3.39)
-    uglifier (2.5.0)
+    tzinfo (0.3.41)
+    uglifier (2.5.3)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
-    unicorn (4.7.0)
-      kgio (~> 2.6)
-      rack
-      raindrops (~> 0.7)
     vkontakte_api (1.3.1)
       faraday (~> 0.8)
       faraday_middleware (~> 0.8)
@@ -314,10 +315,15 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  airbrake (= 3.1.8)
   annotate
   brakeman
-  capistrano-db-tasks!
+  capistrano
+  capistrano-bundler
+  capistrano-db-tasks
+  capistrano-deploytags (~> 1.0.0)!
+  capistrano-rails
+  capistrano-rvm!
+  capistrano-sidekiq!
   capistrano-unicorn (~> 0.1.7)
   coffee-rails
   compass-rails
@@ -334,8 +340,6 @@ DEPENDENCIES
   jquery-ui-sass-rails
   kaminari
   nokogiri
-  openteam-capistrano
-  openteam-commons
   pg
   progress_bar
   rails (~> 3.2.18)
@@ -349,6 +353,5 @@ DEPENDENCIES
   sunspot_solr (= 2.0.0)
   twitter
   uglifier
-  unicorn (= 4.7.0)
   vkontakte_api
   whenever

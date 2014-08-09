@@ -11,7 +11,6 @@ group :assets do
 end
 
 group :default do
-  gem 'airbrake',             '= 3.1.8'
   gem 'configliere'
   gem 'daemons'
   gem 'enumerize'
@@ -21,7 +20,6 @@ group :default do
   gem 'has_searcher'
   gem 'kaminari'
   gem 'nokogiri'
-  gem 'openteam-commons'
   gem 'pg'
   gem 'progress_bar'
   gem 'rails',                '~> 3.2.18'
@@ -37,15 +35,16 @@ group :default do
 end
 
 group :development do
+  gem "capistrano-db-tasks", require: false
   gem 'annotate',                                 :require => false
   gem 'brakeman',                                 :require => false
-  gem 'capistrano-db-tasks',  :ref => '396cbbf',  :require => false,           :git => 'git://github.com/sgruhier/capistrano-db-tasks'
+  gem 'capistrano'
+  gem 'capistrano-bundler'
+  gem 'capistrano-deploytags', '~> 1.0.0', require: false, github: 'mydrive/capistrano-deploytags'
+  gem 'capistrano-rails'
+  gem 'capistrano-rvm', github: "capistrano/rvm"
+  gem 'capistrano-sidekiq' , github: 'seuros/capistrano-sidekiq'
   gem 'capistrano-unicorn',   '~> 0.1.7',         :require => false
   gem 'hirb'
-  gem 'openteam-capistrano',                      :require => false
   gem 'sunspot_solr',         '=2.0.0'
-end
-
-group :production do
-  gem 'unicorn',              '= 4.7.0'
 end

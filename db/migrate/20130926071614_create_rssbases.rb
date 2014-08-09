@@ -1,6 +1,6 @@
 class CreateRssbases < ActiveRecord::Migration
   def change
-    create_table :rssbases do |t|
+    create_table :entries do |t|
       t.text :title
       t.string :url
       t.string :description

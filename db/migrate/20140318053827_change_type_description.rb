@@ -1,9 +1,9 @@
 class ChangeTypeDescription < ActiveRecord::Migration
   def up
-    change_column :rssbases, :description, :text
+    change_column :entries, :description, :text
   end
 
   def down
-    change_column :rssbases, :description, :string
+    change_column :entries, :description, :string
   end
 end

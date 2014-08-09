@@ -1,5 +1,5 @@
 class AddSourceToRssbase < ActiveRecord::Migration
   def change
-    add_column :rssbases, :source, :string
+    add_column :entries, :source, :string
   end
 end
