@@ -8,6 +8,11 @@ every 30.minutes do
   rake "update:twitter_stat", :output => "log/cron.log"
 end
 
+
+every 1.hour do
+  rake "mailer:hour", :output => 'log/cron.log'
+end
+
 every :day, :at => '07:00am' do
   rake "mailer:morning", :output => 'log/cron.log'
 end
