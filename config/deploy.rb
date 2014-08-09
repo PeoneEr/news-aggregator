@@ -1,4 +1,6 @@
 # config valid only for Capistrano 3.1
+require 'capistrano-db-tasks'
+
 lock '3.2.1'
 
 set :application, 'news-aggregator'
@@ -6,11 +8,11 @@ set :repo_url, 'git@github.com:PeoneEr/news-aggregator.git'
 
 set :deploy_to, '/home/deploy/news-aggregator'
 
+set :rails_env, "production"
+set :db_local_clean, true
+set :db_remote_clean, true
+
 set :user, 'deploy'
-#set :domain,
-#role :web, domain
-#role :app, domain
-#role :db, domain, :primary => true
 
 set :linked_files, %w{config/database.yml config/settings.yml config/sunspot.yml}
 set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
