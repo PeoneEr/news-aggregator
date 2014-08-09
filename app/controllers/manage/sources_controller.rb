@@ -1,5 +1,7 @@
 # encoding: utf-8
 class Manage::SourcesController < Manage::ApplicationController
+  http_basic_authenticate_with :name => Settings['auth.login'], :password => Settings['auth.password']
+
   def index
     @sources = Source.order('source, title')
   end
