@@ -28,7 +28,7 @@ group :default do
   gem 'sidekiq',              '~> 2.14'
   gem 'simple_form'
   gem 'sinatra',                                  :require => false
-  gem 'sunspot_rails',        '=2.0.0'
+  gem 'sunspot_rails'
   gem 'twitter'
   gem 'vkontakte_api'
   gem 'whenever'
@@ -46,5 +46,5 @@ group :development do
   gem 'capistrano-sidekiq' , github: 'seuros/capistrano-sidekiq'
   gem 'capistrano-unicorn',   '~> 0.1.7',         :require => false
   gem 'hirb'
-  gem 'sunspot_solr',         '=2.0.0'
+  gem 'sunspot_solr'
 end
