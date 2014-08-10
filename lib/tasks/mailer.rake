@@ -1,7 +1,7 @@
 namespace :mailer do
   desc 'Send morning news'
   task :morning => :environment do
-    MyMailer.morning_entries(Entry.order('rating desc').limit(30)).deliver
+    MyMailer.morning_entries(Entry.newest.order('rating desc').limit(30)).deliver
   end
 
   desc 'Send news hour time'
