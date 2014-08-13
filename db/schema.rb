@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140523022312) do
+ActiveRecord::Schema.define(:version => 20140813144822) do
 
   create_table "entries", :force => true do |t|
     t.text     "title"
@@ -35,6 +35,12 @@ ActiveRecord::Schema.define(:version => 20140523022312) do
   end
 
   add_index "entries", ["source_id"], :name => "index_entries_on_source_id"
+
+  create_table "mailer_setups", :force => true do |t|
+    t.string   "email"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "sources", :force => true do |t|
     t.string   "url"
