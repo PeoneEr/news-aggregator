@@ -1,0 +1,8 @@
+<h1>10 последних записей</h1>
+<ul>
+  <% @info.each do |i| %>
+    <li>
+      <p><%= link_to i.title, i.url %> <span style='color: red'><%= i.rating %></span></p>
+    </li>
+  <% end %>
+</ul>

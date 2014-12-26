@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html lang='ru'>
+  <head>
+    <meta charset='UTF-8'>
+    <title>Последние новости</title>
+    <%= favicon_link_tag 'favicon.ico' %>
+    <%= stylesheet_link_tag    'application' %>
+    <%= javascript_include_tag 'application' %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <noindex>
+    <!-- noindex -->
+    <%= render :partial => 'flash/notice_success' %>
+    <%= render :partial => 'flash/alert_error' %>
+  </div>
+  <div class='container'>
+    <div class='content'>
+      <div class='left_side'>
+        <%= render :partial => 'shared/search' if controller_name == 'entries' %>
+        <%= render :partial => 'shared/filter'if controller_name == 'entries' %>
+        <%= yield %>
+      </div>
+    </div>
+  </div>
+  <%= render :partial => 'shared/modal_window' %>
+  <!-- /noindex -->
+  </noindex>
+  </body>
+</html>

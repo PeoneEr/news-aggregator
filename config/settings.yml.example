@@ -1,0 +1,25 @@
+app:
+  url:                  URL
+  secret:               SECRET
+
+errors:
+  key:                  KEY
+  url:                  URL
+
+redis:
+  url:                  URL
+
+solr:
+  url:                  URL
+
+vk:
+  app_id:               APPID
+
+twitter:
+  access_token:         TOKEN
+  access_token_secret:  SECRET_TOKEN
+  consumer_key:         KEY
+  consumer_secret:      SECRET
+
+znaigorod:
+  url:                  URL

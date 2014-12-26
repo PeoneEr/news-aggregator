@@ -1,0 +1,8 @@
+<h1>Самое популярное с утра</h1>
+<ul>
+  <% @entries.each do |e| %>
+    <li>
+      <p><%= link_to e.title, e.url %> <span style='color: red'><%= e.rating %></span></p>
+    </li>
+  <% end %>
+</ul>
