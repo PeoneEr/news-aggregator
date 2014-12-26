@@ -13,6 +13,7 @@
 /config/database.yml
 /config/deploy.yml
 /config/settings.yml
+/config/deploy/production.rb
 /config/sunspot.yml
 /db/*.sqlite3
 /log/*
