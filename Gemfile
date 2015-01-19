@@ -19,6 +19,7 @@ group :default do
   gem 'gilenson'
   gem 'has_searcher'
   gem 'kaminari'
+  gem 'newrelic_rpm'
   gem 'nokogiri'
   gem 'pg'
   gem 'progress_bar'
