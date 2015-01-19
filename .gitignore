@@ -15,6 +15,7 @@
 /config/settings.yml
 /config/deploy/production.rb
 /config/sunspot.yml
+/config/newrelic.yml
 /db/*.sqlite3
 /log/*
 /public/assets
