@@ -32,10 +32,10 @@ namespace :deploy do
     after 'deploy:updated', 'sidekiq:stop'
     after 'deploy:reverted', 'sidekiq:stop'
     after 'deploy:published', 'sidekiq:start'
-    after "deploy:updated", "newrelic:notice_deployment"
   end
 
   after :publishing, 'deploy:restart'
+  after "deploy:updated", "newrelic:notice_deployment"
   after :finishing, 'deploy:cleanup'
 
   after "deploy", "deploy:migrate"
