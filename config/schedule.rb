@@ -9,7 +9,8 @@ every 30.minutes do
 end
 
 
-every 1.hour do
+#every 1.hour do
+every '0 6,7,8,9,10,11,12,13,14,15,16,17,18 * * 1-5' do
   rake "mailer:hour", :output => 'log/cron.log'
 end
 
