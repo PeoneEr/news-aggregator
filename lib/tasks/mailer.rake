@@ -6,6 +6,6 @@ namespace :mailer do
 
   desc 'Send news hour time'
   task :hour => :environment do
-    MyMailer.updating_entries(Entry.order('created_at desc').limit(10)).deliver
+    MyMailer.updating_entries(Entry.order('created_at desc').limit(30)).deliver
   end
 end

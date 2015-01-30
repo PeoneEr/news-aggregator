@@ -1,8 +1,9 @@
-<h1>10 последних записей</h1>
-<ul>
+<h1>30 последних записей</h1>
+
+<ul style='list-style: none'>
   <% @info.each do |i| %>
     <li>
-      <p><%= link_to i.title, i.url %> <span style='color: red'><%= i.rating %></span></p>
+      <p><%= image_tag i.source.favicon, :size => '16x16' %> <%= link_to i.title, i.url %></p>
     </li>
   <% end %>
 </ul>
