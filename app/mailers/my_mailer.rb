@@ -3,7 +3,7 @@ class MyMailer < ActionMailer::Base
 
   def updating_entries(info)
     @info = info
-    mail(to: MailerSetup.first.email, subject: 'Новые записи')
+    mail(to: Settings['mail.to'], subject: "Новости #{Time.zone.now}. @Новости")
   end
 
   def morning_entries(info)
