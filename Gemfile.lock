@@ -309,7 +309,7 @@ GEM
       json (~> 1.8)
       memoizable (~> 0.4.0)
       simple_oauth (~> 0.2.0)
-    tzinfo (0.3.42)
+    tzinfo (0.3.43)
     uglifier (2.5.3)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
