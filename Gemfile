@@ -8,6 +8,7 @@ group :assets do
   gem 'jquery-ui-sass-rails'
   gem 'sass-rails'
   gem 'uglifier'
+  gem 'header'
 end
 
 group :default do

@@ -145,6 +145,9 @@ GEM
     has_searcher (0.0.97)
       rails (~> 3.2.3)
     hashie (2.1.2)
+    header (0.0.3)
+      compass-rails
+      sass-rails (>= 3.2)
     highline (1.6.21)
     hike (1.2.3)
     hirb (0.7.2)
@@ -347,6 +350,7 @@ DEPENDENCIES
   foundation-rails
   gilenson
   has_searcher
+  header
   hirb
   jquery-rails
   jquery-ui-sass-rails
