@@ -34,6 +34,7 @@ group :default do
   gem 'twitter'
   gem 'vkontakte_api'
   gem 'whenever'
+  gem 'ffi', '= 1.9.6'
 end
 
 group :development do
