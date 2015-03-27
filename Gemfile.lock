@@ -147,7 +147,7 @@ GEM
     has_searcher (0.0.97)
       rails (~> 3.2.3)
     hashie (2.1.2)
-    header (0.0.4)
+    header (0.0.7)
       compass-rails
       sass-rails (>= 3.2)
     highline (1.6.21)
