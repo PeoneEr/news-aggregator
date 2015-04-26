@@ -47,7 +47,6 @@ group :development do
   gem 'capistrano-rails'
   gem 'capistrano-rvm', github: "capistrano/rvm"
   gem 'capistrano-sidekiq' , github: 'seuros/capistrano-sidekiq'
-  gem 'capistrano-unicorn',   '~> 0.1.7',         :require => false
   gem 'hirb'
   gem 'sunspot_solr', '2.0.0'
 end
