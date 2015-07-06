@@ -8,6 +8,6 @@ class MyMailer < ActionMailer::Base
 
   def morning_entries(info)
     @entries = info
-    mail(to: MailerSetup.first.email, subject: 'Утренние новости прибыли')
+    mail(to: Settings['mail.to'], subject: 'Утренние новости прибыли')
   end
 end
