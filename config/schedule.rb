@@ -1,3 +1,11 @@
+every 1.hour do
+  rake "mailer:hour"
+end
+
+every :day, :at => '7:00am' do
+  rake "mailer:morning"
+end
+
 every 7.hour do
   rake "update:vk_and_facebook_stat"
 end
