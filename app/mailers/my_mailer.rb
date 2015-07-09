@@ -1,5 +1,5 @@
 class MyMailer < ActionMailer::Base
-  default from: Settings['mail.from']
+  default from: "Новости by news.ai-factory.com <#{Settings['mail.from']}>"
 
   def updating_entries(info)
     @info = info
