@@ -24,7 +24,7 @@ group :default do
   gem 'nokogiri'
   gem 'pg'
   gem 'progress_bar'
-  gem 'rails',                '~> 3.2.18'
+  gem 'rails',                '~> 3.2'
   gem 'russian'
   gem 'sanitize'
   gem 'sidekiq',              '~> 2.14'
