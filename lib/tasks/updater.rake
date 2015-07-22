@@ -7,16 +7,21 @@ namespace :update do
 
   desc 'Update newest entries statistics'
   task :stat_newest_entries => :environment do
-    UpdateNewestStatWorker.perform_async
+    #UpdateNewestStatWorker.perform_async
+    VkFetcher.new.update_newest_stat
+    FacebookFetcher.new.update_newest_stat
   end
 
   desc 'Update twitter statistics'
   task :twitter_stat => :environment do
-    TwitterWorker.perform_async
+    #TwitterWorker.perform_async
+    TwitterFetcher.new.update_stat
   end
 
   desc 'Update vkontakte and facebook statistics'
   task :vk_and_facebook_stat => :environment do
-    UpdateOlderStatWorker.perform_async
+    #UpdateOlderStatWorker.perform_async
+    VkFetcher.new.update_older_stat
+    FacebookFetcher.new.update_older_stat
   end
 end
