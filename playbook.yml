@@ -1,0 +1,25 @@
+---
+- hosts: all
+  sudo: true
+  tasks:
+    - name: update apt cache
+      apt: update_cache=yes
+
+    - name: install packages
+      apt: name={{ item }} state=present
+      with_items:
+        - aptitude
+        - git
+        - zsh
+        - vim
+        - curl
+        - wget
+
+    #- name: Install RVM
+      #shell: "curl -sSL https://get.rvm.io | sudo bash"
+      #
+    - name: Configure servers with ruby support
+      hosts: all
+
+      roles:
+        - { role: rvm_io.rvm1-ruby, tags: ruby, sudo: True, rvm1_install_flags: '--auto-dotfiles --user-install', rvm1_install_path: '/home/{{ ansible_ssh_user  }}/.rvm' }
